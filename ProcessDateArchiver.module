@@ -260,30 +260,24 @@ class ProcessDateArchiver extends Process implements Module {
 				$archivePage = $archivePage->parent;
 			}
 
-			// First find all day archives and delete if empty
+			// First delete all empty day archives
 			if ($dayTemplate) {
-				foreach ($archivePage->find('template=' . $dayTemplate->name) as $dayPage) {
-					if ( ! $dayPage->numChildren) {
-						$dayPage->delete();
-					}
+				foreach ($archivePage->find('template=' . $dayTemplate->name . ',numChildren=0') as $dayPage) {
+					$dayPage->delete();
 				}
 			}
 
-			// Then find all month archives and delete if empty
+			// Then delete all empty month archives
 			if ($monthTemplate) {
-				foreach ($archivePage->find('template=' . $monthTemplate->name) as $monthPage) {
-					if ( ! $monthPage->numChildren) {
-						$monthPage->delete();
-					}
+				foreach ($archivePage->find('template=' . $monthTemplate->name . ',numChildren=0') as $monthPage) {
+					$monthPage->delete();
 				}
 			}
 
-			// And then find all year archives and delete if empty
+			// And then delete all empty year archives
 			if ($yearTemplate) {
-				foreach ($archivePage->find('template=' . $yearTemplate->name) as $yearPage) {
-					if ( ! $yearPage->numChildren) {
-						$yearPage->delete();
-					}
+				foreach ($archivePage->find('template=' . $yearTemplate->name . ',numChildren=0') as $yearPage) {
+					$yearPage->delete();
 				}
 			}
 		}
