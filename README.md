@@ -7,7 +7,7 @@ Automatically archives pages based on a DateTime field (e.g. /news/2013/01/03/so
 ### Behavior
 
 - When you add a page with a specified template, the module will automatically create year/month/day archives for it.
-- When you change the date in a speficied DateTime field, the page is automatically moved to the correct year/month/day archive.
+- When you change the date in a specified DateTime field, the page is automatically moved to the correct year/month/day archive.
 - When moving or trashing a page, the module will automatically clean up empty year, month and day archives.
 
 ### How to create an archiving rule
@@ -24,7 +24,7 @@ Automatically archives pages based on a DateTime field (e.g. /news/2013/01/03/so
 ### Tips and tricks
 
 - Configure the archive templates that will contain other archives to sort its children by name.
-- Configure the archive template that will contain the news items to sort its children by the speficied DateTime field.
+- Configure the archive template that will contain the news items to sort its children by the specified DateTime field.
 - You will improve usability if you dont allow the user to create date archives manually.
 
 ### How to Install
