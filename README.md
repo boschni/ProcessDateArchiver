@@ -29,10 +29,10 @@ Automatically archives pages based on a DateTime field (e.g. /news/2013/01/03/so
 
 ### How to Install
 
-Install the module by placing `ProcessDateArchiver.module` in `/site/modules/`.
-Check for new modules on the _Modules_ screen in the ProcessWire admin.
-Click _Install_ for the Date Archiver Process.
+1. Install the module by placing `ProcessDateArchiver.module` in `/site/modules/`.
+2. Check for new modules on the _Modules_ screen in the ProcessWire admin.
+3. Click _Install_ for the Date Archiver Process.
 
 ---
 
-Copyright 2012 by Niek Bosch
+Copyright 2013 by Niek Bosch
