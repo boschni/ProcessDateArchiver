@@ -334,22 +334,18 @@ class ProcessDateArchiver extends Process implements Module {
 			// Add month template
 			if ($monthTemplate === null) {
 				$data[] = '';
-			}
-			else if ($monthTemplate === false) {
+			} else if ($monthTemplate === false) {
 				$data[] = $rule->month_archive_template_id . ' <em>(' . __('nonexistent') . ')</em>';
-			}
-			else {
+			} else {
 				$data[] = $monthTemplate->name;
 			}
 
 			// Add day template
 			if ($dayTemplate === null) {
 				$data[] = '';
-			}
-			else if ($dayTemplate === false) {
+			} else if ($dayTemplate === false) {
 				$data[] = $rule->day_archive_template_id . ' <em>(' . __('nonexistent') . ')</em>';
-			}
-			else {
+			} else {
 				$data[] = $dayTemplate->name;
 			}
 
