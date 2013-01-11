@@ -363,8 +363,9 @@ class ProcessDateArchiver extends Process implements Module {
 	 */
 	public function ___executeAdd() {
 
+		$info = $this->getModuleInfo();
 		$this->setFuel('processHeadline', $this->_('Add Archiving Rule'));
-		$this->fuel('breadcrumbs')->add(new Breadcrumb('./', $this->getModuleInfo()['title']));
+		$this->fuel('breadcrumbs')->add(new Breadcrumb('./', $info['title']));
 		return $this->renderRuleForm();
 	}
 
@@ -374,8 +375,9 @@ class ProcessDateArchiver extends Process implements Module {
 	 */
 	public function ___executeEdit() {
 
+		$info = $this->getModuleInfo();
 		$this->setFuel('processHeadline', $this->_('Edit Archiving Rule'));
-		$this->fuel('breadcrumbs')->add(new Breadcrumb('./', $this->getModuleInfo()['title']));
+		$this->fuel('breadcrumbs')->add(new Breadcrumb('./', $info['title']));
 		return $this->renderRuleForm();
 	}
 
