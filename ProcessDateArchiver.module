@@ -489,7 +489,7 @@ class ProcessDateArchiver extends Process implements Module {
 			if ( ! $form->getErrors() && $rule->save()) {
 
 				$this->message($this->_('Saved Archiving Rule'));
-				$this->session->redirect($this->getInstalledPage()->path);
+				$this->session->redirect($this->getInstalledPage()->url);
 				return;
 			} else {
 				$this->error($this->_('Unable to save rule'));
@@ -512,7 +512,7 @@ class ProcessDateArchiver extends Process implements Module {
 			$this->message($this->_('Deleted Archiving Rule'));
 		}
 
-		$this->session->redirect($this->getInstalledPage()->path);
+		$this->session->redirect($this->getInstalledPage()->url);
 	}
 
 	/**
