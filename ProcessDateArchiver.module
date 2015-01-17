@@ -208,7 +208,7 @@ class ProcessDateArchiver extends Process implements Module {
 
 				if ( ! $dayPage->id) {
 					$dayPage = new Page();
-					$dayPage->template = $monthTemplate;
+					$dayPage->template = $dayTemplate;
 					$dayPage->parent = $monthPage;
 					$dayPage->title = $day;
 					$dayPage->save();
