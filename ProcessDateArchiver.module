@@ -424,11 +424,8 @@ class ProcessDateArchiver extends Process implements Module {
 		$field->addOption('');
 
 		foreach ($this->fields as $inputField) {
-			foreach ($this->fieldtypes as $fieldtype) {
-				if ($inputField->type instanceof $fieldtype) {
-					$field->addOption($inputField->id, $inputField->name);
-					break;
-				}
+			if (in_array($inputField->type, $this->fieldtypes)) {
+				$field->addOption($inputField->id, $inputField->name);
 			}
 		}
 
